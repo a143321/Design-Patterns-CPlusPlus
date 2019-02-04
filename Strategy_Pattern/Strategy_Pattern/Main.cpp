@@ -30,7 +30,7 @@ void use_shared_ptr_list()
 	ducks.push_back(std::move(rubber));
 	ducks.push_back(std::move(decoy));
 
-	// ‚È‚¨Afor (auto f : v) ‚Æ‚·‚é‚Æ f ‚Í std::unique_ptr‚ÌƒRƒs[‚É‚È‚èAƒRƒ“ƒpƒCƒ‹ƒGƒ‰[‚Æ‚È‚è‚Ü‚·
+	// ãªãŠã€for (auto f : v) ã¨ã™ã‚‹ã¨ f ã¯ std::unique_ptrã®ã‚³ãƒ”ãƒ¼ã«ãªã‚Šã€ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã‚¨ãƒ©ãƒ¼ã¨ãªã‚Šã¾ã™
 	for (const auto& item : ducks)
 	{
 		item->quack();
@@ -46,7 +46,7 @@ void use_shared_ptr_list_using_emplace_back()
 	ducks.emplace_back(new RubberDuck(new Squeak()));
 	ducks.emplace_back(new DecoyDuck(new MuteQuack()));
 
-	// ‚È‚¨Afor (auto f : v) ‚Æ‚·‚é‚Æ f ‚Í std::unique_ptr‚ÌƒRƒs[‚É‚È‚èAƒRƒ“ƒpƒCƒ‹ƒGƒ‰[‚Æ‚È‚è‚Ü‚·
+	// ãªãŠã€for (auto f : v) ã¨ã™ã‚‹ã¨ f ã¯ std::unique_ptrã®ã‚³ãƒ”ãƒ¼ã«ãªã‚Šã€ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã‚¨ãƒ©ãƒ¼ã¨ãªã‚Šã¾ã™
 	for (const auto& item : ducks)
 	{
 		item->quack();
@@ -65,7 +65,7 @@ int main()
 	rubber->quack();
 	decoy->quack();
 
-	// new‚µ‚Ä‚¢‚é‚Ì‚ÅAdelete‚ğ–Y‚ê‚¸‚É‚·‚é‚±‚Æ
+	// newã—ã¦ã„ã‚‹ã®ã§ã€deleteã‚’å¿˜ã‚Œãšã«ã™ã‚‹ã“ã¨
 	delete duck;
 	delete redHead;
 	delete rubber;

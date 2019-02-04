@@ -2,7 +2,7 @@
 #include <iostream>
 #include <assert.h>
 
-// –Â‚«º‚Ó‚é‚Ü‚¢ƒCƒ“ƒ^[ƒtƒF[ƒX
+// é³´ãå£°ãµã‚‹ã¾ã„ã‚¤ãƒ³ã‚¿ãƒ¼ãƒ•ã‚§ãƒ¼ã‚¹
 class QuackBehavior
 {
 public:
@@ -10,18 +10,18 @@ public:
 	virtual void sound() const = 0;
 };
 
-// Ã‚©‚È(ƒAƒqƒ‹‚È‚Ç‚Ì)ƒK[ƒK[–Â‚«ºƒNƒ‰ƒX
+// é™ã‹ãª(ã‚¢ãƒ’ãƒ«ãªã©ã®)ã‚¬ãƒ¼ã‚¬ãƒ¼é³´ãå£°ã‚¯ãƒ©ã‚¹
 class SmallQuack : public QuackBehavior
 {
 public:
-	// ”h¶ƒNƒ‰ƒX‘¤‚ÌƒI[ƒo[ƒ‰ƒCƒhƒƒ\ƒbƒh‚É‚Íoverridew’èq‚ğ•t‚¯‚é (ƒI[ƒo[ƒ‰ƒCƒhŒ³‚ÌŠî’êƒNƒ‰ƒX‚ğŒp³‚µ‚Ä‚¢‚È‚¢ê‡AƒRƒ“ƒpƒCƒ‹ƒGƒ‰[‚Æ‚È‚é)
+	// æ´¾ç”Ÿã‚¯ãƒ©ã‚¹å´ã®ã‚ªãƒ¼ãƒãƒ¼ãƒ©ã‚¤ãƒ‰ãƒ¡ã‚½ãƒƒãƒ‰ã«ã¯overrideæŒ‡å®šå­ã‚’ä»˜ã‘ã‚‹ (ã‚ªãƒ¼ãƒãƒ¼ãƒ©ã‚¤ãƒ‰å…ƒã®åŸºåº•ã‚¯ãƒ©ã‚¹ã‚’ç¶™æ‰¿ã—ã¦ã„ãªã„å ´åˆã€ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã‚¨ãƒ©ãƒ¼ã¨ãªã‚‹)
 	void sound() const override
 	{
 		std::cout << "Normal sound : kua! kua!" << std::endl;
 	}
 };
 
-// (ƒAƒqƒ‹‚È‚Ç‚Ì)ƒK[ƒK[–Â‚«ºƒNƒ‰ƒX
+// (ã‚¢ãƒ’ãƒ«ãªã©ã®)ã‚¬ãƒ¼ã‚¬ãƒ¼é³´ãå£°ã‚¯ãƒ©ã‚¹
 class Quack : public QuackBehavior
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 
-// ƒLƒ…ƒbƒLƒ…ƒb–Â‚é–Â‚«ºƒNƒ‰ƒX
+// ã‚­ãƒ¥ãƒƒã‚­ãƒ¥ãƒƒé³´ã‚‹é³´ãå£°ã‚¯ãƒ©ã‚¹
 class Squeak : public QuackBehavior
 {
 public:
@@ -42,7 +42,7 @@ public:
 };
 
 
-// –³‰¹–Â‚«ºƒNƒ‰ƒX
+// ç„¡éŸ³é³´ãå£°ã‚¯ãƒ©ã‚¹
 class MuteQuack : public QuackBehavior
 {
 public:
@@ -52,35 +52,35 @@ public:
 	}
 };
 
-// DuckiŠî’êƒNƒ‰ƒX)
-// QuackBehavior‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‚Ì‰ğ•ú‚ÍAŠî’êƒNƒ‰ƒX‚Å‚ ‚éDuckƒNƒ‰ƒX‚ªó‚¯‚Â
+// Duckï¼ˆåŸºåº•ã‚¯ãƒ©ã‚¹)
+// QuackBehaviorã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã®è§£æ”¾ã¯ã€åŸºåº•ã‚¯ãƒ©ã‚¹ã§ã‚ã‚‹Duckã‚¯ãƒ©ã‚¹ãŒå—ã‘æŒã¤
 class Duck
 {
 private:
 	const QuackBehavior * quackBehavior = nullptr;
 
 public:
-	// ˆø”‚È‚µ‚ÌƒRƒ“ƒXƒgƒ‰ƒNƒ^‚Íg—p‚³‚¹‚È‚¢
+	// å¼•æ•°ãªã—ã®ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã¯ä½¿ç”¨ã•ã›ãªã„
 	Duck() = delete;
 
-	// ƒCƒ“ƒXƒ^ƒ“ƒX•Ï”‚ğƒRƒ“ƒXƒgƒ‰ƒNƒ^‚Å‰Šú‰»‚·‚éê‡‚ÍAƒRƒ“ƒXƒgƒ‰ƒNƒ^‰Šú‰»q‚ğg—p‚µ‚Ü‚µ‚å‚¤
-	// ˆø”‚ğ1ŒÂ‚Æ‚éƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ÌˆÃ–ÙŒÄ‚Ño‚µ‚ğ‹Ö~‚·‚é‚É‚ÍCƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ğgexplicith‚ÆéŒ¾‚µ‚Ä‚¨‚­D explicitéŒ¾‚µ‚½ƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ÍC–¾¦“IŒÄ‚Ño‚µiC obj(10);j‚Å‚µ‚©ŒÄ‚Ño‚¹‚È‚­‚È‚èC ˆÃ–ÙŒÄ‚Ño‚µ‚ğ‹Lq‚·‚é‚ÆƒRƒ“ƒpƒCƒ‹ƒGƒ‰[‚É‚È‚éD 
-	explicit Duck(QuackBehavior* behavior) : quackBehavior(behavior)
+	// ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹å¤‰æ•°ã‚’ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã§åˆæœŸåŒ–ã™ã‚‹å ´åˆã¯ã€ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿åˆæœŸåŒ–å­ã‚’ä½¿ç”¨ã—ã¾ã—ã‚‡ã†
+	// å¼•æ•°ã‚’1å€‹ã¨ã‚‹ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã®æš—é»™å‘¼ã³å‡ºã—ã‚’ç¦æ­¢ã™ã‚‹ã«ã¯ï¼Œã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã‚’â€œexplicitâ€ã¨å®£è¨€ã—ã¦ãŠãï¼ explicitå®£è¨€ã—ãŸã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã¯ï¼Œæ˜ç¤ºçš„å‘¼ã³å‡ºã—ï¼ˆC obj(10);ï¼‰ã§ã—ã‹å‘¼ã³å‡ºã›ãªããªã‚Šï¼Œ æš—é»™å‘¼ã³å‡ºã—ã‚’è¨˜è¿°ã™ã‚‹ã¨ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«æ™‚ã‚¨ãƒ©ãƒ¼ã«ãªã‚‹ï¼ 
+	explicit Duck(const QuackBehavior* behavior) : quackBehavior(behavior)
 	{
-		// ƒRƒ“ƒXƒgƒ‰ƒNƒg‚É“n‚³‚ê‚é behavior‚ªnullptr‚Å‚ ‚é‚ÆAƒƒ“ƒoŠÖ”quack()ŒÄ‚Ño‚·‚Æ—‚¿‚é‚½‚ßAassert•¶‚ğ’Ç‰Á‚·‚é
+		// ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ãƒˆæ™‚ã«æ¸¡ã•ã‚Œã‚‹ behaviorãŒnullptrã§ã‚ã‚‹ã¨ã€ãƒ¡ãƒ³ãƒé–¢æ•°quack()å‘¼ã³å‡ºã™ã¨è½ã¡ã‚‹ãŸã‚ã€assertæ–‡ã‚’è¿½åŠ ã™ã‚‹
 		assert(behavior != nullptr);
 	}
 
-	// ƒ|ƒŠƒ‚[ƒtƒBƒYƒ€‚ğ—˜—p‚·‚×‚­ì‚Á‚½Šî’êƒNƒ‰ƒX‚ÌƒfƒXƒgƒ‰ƒNƒ^‚Ívirtual‚ª•K—v‚Å‚ ‚é
-	// ‚Å‚È‚¢‚ÆA”h¶ƒNƒ‰ƒX‚ÌƒfƒXƒgƒ‰ƒNƒ^‚ªŒÄ‚Î‚ê‚È‚¢
+	// ãƒãƒªãƒ¢ãƒ¼ãƒ•ã‚£ã‚ºãƒ ã‚’åˆ©ç”¨ã™ã¹ãä½œã£ãŸåŸºåº•ã‚¯ãƒ©ã‚¹ã®ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã¯virtualãŒå¿…è¦ã§ã‚ã‚‹
+	// ã§ãªã„ã¨ã€æ´¾ç”Ÿã‚¯ãƒ©ã‚¹ã®ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ãŒå‘¼ã°ã‚Œãªã„
 	virtual ~Duck()
 	{
 		delete quackBehavior;
 		std::cout << "Duck Destructed" << std::endl;
 	};
 
-	// quackŠÖ”‚ÍA”h¶ƒNƒ‰ƒX‚ÅAoverride‚³‚¹‚È‚¢‚±‚Æ‚ğ–¾¦‚·‚é
-	// final‚ğw’è‚µ‚½‰¼‘zƒƒ“ƒoŠÖ”‚ÍA”h¶ƒNƒ‰ƒX‚É‚ÄƒI[ƒo[ƒ‰ƒCƒh‚³‚ê‚½‚Æ‚«A•¶–@ˆá”½‚Æ‚µ‚Äˆµ‚í‚ê‚é
+	// quacké–¢æ•°ã¯ã€æ´¾ç”Ÿã‚¯ãƒ©ã‚¹ã§ã€overrideã•ã›ãªã„ã“ã¨ã‚’æ˜ç¤ºã™ã‚‹
+	// finalã‚’æŒ‡å®šã—ãŸä»®æƒ³ãƒ¡ãƒ³ãƒé–¢æ•°ã¯ã€æ´¾ç”Ÿã‚¯ãƒ©ã‚¹ã«ã¦ã‚ªãƒ¼ãƒãƒ¼ãƒ©ã‚¤ãƒ‰ã•ã‚ŒãŸã¨ãã€æ–‡æ³•é•åã¨ã—ã¦æ‰±ã‚ã‚Œã‚‹
 	virtual void quack() const final
 	{
 		quackBehavior->sound();
@@ -90,7 +90,7 @@ public:
 class RedHeadDuck : public Duck
 {
 public:
-	RedHeadDuck(QuackBehavior* behavior) : Duck(behavior) {}
+	RedHeadDuck(const QuackBehavior* behavior) : Duck(behavior) {}
 
 	~RedHeadDuck()
 	{
@@ -101,7 +101,7 @@ public:
 class RubberDuck : public Duck
 {
 public:
-	RubberDuck(QuackBehavior* behavior) : Duck(behavior) {}
+	RubberDuck(const QuackBehavior* behavior) : Duck(behavior) {}
 
 	~RubberDuck()
 	{
@@ -112,7 +112,7 @@ public:
 class DecoyDuck : public Duck
 {
 public:
-	DecoyDuck(QuackBehavior* behavior) : Duck(behavior) {}
+	DecoyDuck(const QuackBehavior* behavior) : Duck(behavior) {}
 
 	~DecoyDuck()
 	{
